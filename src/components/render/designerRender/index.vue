@@ -1,8 +1,8 @@
 <template>
   <div class="holder" ref="viewportRef">
     <div class="screen" :style="{ width: Page.width, height: Page.height }">
-      <component v-for="widget in widgetStore" :is="widget.temp" :ref="widget.nanoid" data-type="widget"
-        :data-nanoid="widget.nanoid" :class="{ 'active': widget.nanoid === currentWidgetId }">
+      <component v-for="widget in widgetStore" :is="widget.temp" :key="widget.nanoid" :ref="widget.nanoid"
+        data-type="widget" :data-nanoid="widget.nanoid" :class="{ 'active': widget.nanoid === currentWidgetId }">
       </component>
       <SizeControl />
     </div>
@@ -54,12 +54,12 @@ const handleSelection = (e: MouseEvent) => {
     // 设置选中元素
     currentWidgetId.value = nanoid
     currentWidget.value = widgetStore.filter(item => item.nanoid == nanoid)[0]
+    console.log(widgetStore, currentWidgetId.value)
     // 绑定移动事件：除背景图以外的元件才能移动
     initmovement(e)
   } else {
     currentWidgetId.value = ''
     currentWidget.value = undefined
-
   }
 }
 
@@ -113,6 +113,22 @@ onMounted(() => {
   } else {
     console.error('未找的‘viewport’节点')
   }
+
+  // 绑定键盘删除
+  document.addEventListener(
+    'keydown',
+    (e) => {
+      e.stopPropagation()
+      const code = e.code
+      if (code == 'Backspace') {
+        const index = widgetStore.findIndex(item => item.nanoid == currentWidgetId.value)
+        widgetStore.splice(index, 1)
+        currentWidgetId.value = ''
+        currentWidget.value = undefined
+      }
+    },
+    true
+  )
 })
 </script>
 <style scoped lang="less">
