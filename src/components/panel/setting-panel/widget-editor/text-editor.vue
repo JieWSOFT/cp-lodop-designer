@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TextWidgetConfigs } from 'types/widgets';
+import { TextWidgetConfigs } from '/@/widgets';
 import { PropType } from 'vue'
 import { fontWeightArr, fontFamilyArr, alignArr, itemTypeArray, pageIndexArray } from '/@/components/constant'
 defineOptions({

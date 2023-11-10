@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TableWidgetConfigs } from 'types/widgets';
+import { TableWidgetConfigs } from '/@/widgets';
 import { fontFamilyArr, alignArr } from '/@/components/constant'
 
 import { PropType } from 'vue';

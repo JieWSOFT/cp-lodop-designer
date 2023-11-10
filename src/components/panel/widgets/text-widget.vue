@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
-import { TextWidgetConfigs } from 'types/widgets';
 import { reactive } from 'vue';
+import { TextWidgetConfigs } from '/@/widgets';
 
 defineOptions({
   name: '文本,text'
@@ -46,4 +46,4 @@ defineExpose({
 .text_wrap {
   overflow: hidden;
 }
-</style>
+</style>/@/widgets

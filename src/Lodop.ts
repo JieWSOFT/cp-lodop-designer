@@ -28,7 +28,7 @@ function parseAlignment(align: string) {
  * @param columns 表格列配置信息
  * @param data 表格数据
  */
-export const tableTempTohtml = (columns: any[], data: any, style: any) => {
+const tableTempTohtml = (columns: any[], data: any, style: any) => {
 
   // 表格全局样式
   let styleStr = 'text-align:' + style.align + ';'

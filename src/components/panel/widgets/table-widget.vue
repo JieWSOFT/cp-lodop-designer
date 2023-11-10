@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TableWidgetConfigs } from 'types/widgets';
+import { TableWidgetConfigs } from '/@/widgets';
 import { reactive } from 'vue';
 defineOptions({
   name: '表格,table'
