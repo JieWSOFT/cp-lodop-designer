@@ -1,4 +1,7 @@
-<script setup lang="ts">
+<script setup lang="ts" name="LodopDesigner">
+defineOptions({
+  name: 'LodopDesigner'
+})
 import { CSSProperties } from 'vue';
 import DesignerRender from '/@/components/render/designerRender/index.vue'
 import editorRender from '/@/components/render/editor-render/index.vue'

@@ -1,8 +1,14 @@
 {
   "name": "cp-lodop-designer",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.7",
+  "main": "./dist/cp-lodop-designer.js",
+  "types": "./types",
   "type": "module",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
