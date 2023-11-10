@@ -20,7 +20,8 @@ const configs = reactive<TextWidgetConfigs>(
     // 组件特有配置项
     text: '文本',
     align: 'left',
-    itemType: 0
+    itemType: 0,
+    pageIndex: null
   }
 )
 defineExpose({
@@ -35,7 +36,8 @@ defineExpose({
     top: configs.top + 'mm',
     left: configs.left + 'mm',
     width: configs.width + 'mm',
-    height: configs.height + 'mm'
+    height: configs.height + 'mm',
+    fontFamily: configs.fontFamily
   }">
     {{ configs.text }}
   </div>

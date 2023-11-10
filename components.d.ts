@@ -25,6 +25,7 @@ declare module 'vue' {
     DesignerRender: typeof import('./src/components/render/designerRender/index.vue')['default']
     EditorRender: typeof import('./src/components/render/editor-render/index.vue')['default']
     PagerEditor: typeof import('./src/components/panel/setting-panel/pagerEditor.vue')['default']
+    PrintEditor: typeof import('./src/components/panel/setting-panel/printEditor.vue')['default']
     SizeControl: typeof import('./src/components/panel/sizeControl.vue')['default']
     TableEditor: typeof import('./src/components/panel/setting-panel/widget-editor/table-editor.vue')['default']
     TableWidget: typeof import('./src/components/panel/widgets/table-widget.vue')['default']

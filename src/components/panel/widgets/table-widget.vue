@@ -17,8 +17,9 @@ const configs = reactive<TableWidgetConfigs>({
   //表格独有配置
   columns: [{
     title: '标题名',
-    value: 'test'
-  }]
+    key: 'test'
+  }],
+  Offset2Top: 0
 })
 
 defineExpose({
@@ -43,7 +44,7 @@ defineExpose({
         </th>
       </tr>
       <tr>
-        <td v-for="item in configs.columns" :key="item.title" :style="{ height: `${item.height}mm` }">{{ item.value }}
+        <td v-for="item in configs.columns" :key="item.title" :style="{ height: `${item.height}mm` }">{{ item.key }}
         </td>
       </tr>
     </table>

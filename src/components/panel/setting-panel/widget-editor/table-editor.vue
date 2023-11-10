@@ -18,7 +18,7 @@ const props = defineProps({
 const addColumn = () => {
   props.configs.columns.push({
     title: '标题名',
-    value: 'test'
+    key: 'test'
   })
 }
 </script>
@@ -70,15 +70,20 @@ const addColumn = () => {
           <a-input-number addon-after="mm" v-model:value="props.configs.titleHeight" />
         </a-form-item>
       </a-col>
+      <a-col span="12">
+        <a-form-item label="次页高">
+          <a-input-number addon-after="mm" v-model:value="props.configs.Offset2Top" />
+        </a-form-item>
+      </a-col>
       <a-col span="24">
         <a-form-item label="列" :wrapperCol="{ span: 22 }" :labelCol="{ span: 2 }">
-          <div v-for="item in props.configs.columns" :key="item.value">
+          <div v-for="item in props.configs.columns" :key="item.key">
             <a-row>
               <a-col span="8" style="padding:0 10px 10px 0 ">
                 <a-input v-model:value="item.title" placeholder="列标题" />
               </a-col>
               <a-col span="8" style="padding:0 10px 10px 0 ">
-                <a-input v-model:value="item.value" placeholder="列值字段名" />
+                <a-input v-model:value.lazy="item.key" placeholder="列值字段名" />
               </a-col>
               <a-col span="8" style="padding:0 10px 10px 0 ">
                 <a-input-number addon-after="mm" v-model:value="item.width" placeholder="列宽度" />

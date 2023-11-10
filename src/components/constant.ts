@@ -9,3 +9,14 @@ export const itemTypeArray = [
   { label: '页数项', value: 3 },
   { label: '多页项', value: 4 },
 ]
+export const pageIndexArray = [
+  { label: '第一页', value: 'First'},
+  { label: '最后页', value: 'Last' },
+  { label: '奇数页', value: 'Odd' },
+  { label: '偶数页', value: 'Even' },
+]
+export const directionArray = [
+  { label: '纵(正)向打印，固定纸张', value: 1 },
+  { label: '横向打印，固定纸张', value: 2 },
+  { label: '纵(正)向打印，宽度固定', value: 3 },
+]

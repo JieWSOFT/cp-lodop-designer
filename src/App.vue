@@ -27,5 +27,3 @@ const siderStyles: CSSProperties = {
     </a-layout>
   </a-layout>
 </template>
-
-<style scoped></style>

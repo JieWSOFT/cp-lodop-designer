@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { TextWidgetConfigs } from 'types/widgets';
 import { PropType } from 'vue'
-import { fontWeightArr, fontFamilyArr, alignArr, itemTypeArray } from '/@/components/constant'
+import { fontWeightArr, fontFamilyArr, alignArr, itemTypeArray, pageIndexArray } from '/@/components/constant'
 defineOptions({
   name: 'text-editor'
 })
@@ -68,6 +68,14 @@ const props = defineProps({
         <a-form-item label="类型">
           <a-select v-model:value="props.configs.itemType">
             <a-select-option v-for="item in itemTypeArray" :key="item" :value="item.value">{{ item.label
+            }}</a-select-option>
+          </a-select>
+        </a-form-item>
+      </a-col>
+      <a-col span="12">
+        <a-form-item label="输出页">
+          <a-select v-model:value="props.configs.pageIndex" allowClear>
+            <a-select-option v-for="item in pageIndexArray" :key="item" :value="item.value">{{ item.label
             }}</a-select-option>
           </a-select>
         </a-form-item>

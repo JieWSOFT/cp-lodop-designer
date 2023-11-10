@@ -12,10 +12,12 @@ export interface BaseWidgetConfigs {
 
 export interface TextWidgetConfigs extends BaseWidgetConfigs {
   text: string,
-  itemType: number
+  itemType?: number,
+  pageIndex?: string | number | null
 }
 
 export interface TableWidgetConfigs extends BaseWidgetConfigs {
-  columns: { title: string, value: string, width?: number, height?: number}[]
+  columns: { title: string, key: string, width?: number, height?: number }[]
   titleHeight?: number,
+  Offset2Top?: number
 }
